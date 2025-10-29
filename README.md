@@ -1,89 +1,90 @@
-# AI-Snake-Game
-🐍 AI Snake Game using Deep Q-Learning (DQN) — built with Python, PyTorch, and Pygame. The AI learns to play the classic snake game through reinforcement learning.
-🎯 Objective:
+🐍 Snake AI (Web)
 
-The objective of this project is to design and develop an AI-powered Snake Game that runs in a web browser and can automatically play using the Breadth-First Search (BFS) pathfinding algorithm.
-The project demonstrates how search algorithms from Artificial Intelligence can be applied to real-time decision-making in games.
+A browser-based AI Snake Game built using Flask and BFS (Breadth-First Search) algorithm for intelligent pathfinding.
+The system automatically navigates the snake towards food while avoiding collisions, demonstrating AI pathfinding techniques in a dynamic environment.
 
-🧩 Project Overview:
+🧠 Project Overview
 
-Snake AI (Web) is an interactive web-based implementation of the classic Snake game enhanced with an AI autopilot system.
-It uses BFS (Breadth-First Search) to calculate the shortest path between the snake’s head and the food, allowing it to navigate intelligently through the grid while avoiding collisions.
+This mini-project showcases AI pathfinding in real time, where the Snake autonomously finds the optimal route to reach food using the BFS (Breadth-First Search) algorithm.
 
-The application is built using Flask (Python) as a lightweight backend web server and HTML5 Canvas + JavaScript for rendering the game interface.
+The user can toggle between manual control and AI autopilot, adjust the game speed, and visualize how BFS explores possible paths.
 
-Users can toggle between manual and AI-controlled modes, visualize how the pathfinding algorithm works in real-time, and control the game speed and play state directly in the browser.
+This project also serves as a great example of AI in games, integrating Flask for web serving and JavaScript Canvas for real-time rendering.
 
-⚙️ Key Features:
+⚙️ Requirements
 
-🧭 BFS Pathfinding Algorithm: Finds the shortest path from snake head to food in real-time.
+Python 3.8+
 
-🕹️ Dual Play Modes:
+pip
 
-Manual Mode: Controlled via arrow keys.
+Install dependencies:
 
-AI Mode: Automatically plays using BFS logic.
-
-⏱️ Adjustable Speed: Slider to change the FPS (2–60).
-
-🧱 Safe Tail Logic: The AI considers the tail as a safe path when planning its next move.
-
-🌐 Web-Based Interface: Runs smoothly on any modern browser using Flask.
-
-📱 Responsive Canvas: 640×480 grid with 20px cell size for clean visuals.
-
-🧮 Algorithm Used:
-
-Breadth-First Search (BFS):
-BFS is a fundamental search algorithm that explores all possible paths level by level until the shortest path to the goal (food) is found.
-In this game, BFS helps the AI find an optimal and collision-free path dynamically as the snake and food positions change.
-
-🏗️ System Requirements:
-
-Programming Language: Python 3.8+
-
-Framework: Flask
-
-Frontend: HTML, CSS, JavaScript (Canvas)
-
-Libraries:
-
-flask for backend
-
-built-in Python modules (no heavy dependencies)
-
-💻 Installation & Execution:
 pip install flask
+
+▶️ How to Run
+
+Clone or download this repository
+
+Navigate to the project folder
+
+Run the following command:
+
 python app.py
 
 
-Then open your browser and visit:
+Open your browser and go to:
 👉 http://127.0.0.1:5000/
 
-🎮 Controls:
-Control	Description
-▶️ Start/Pause	Start or stop the game loop
-⚡ Speed Slider	Adjust game FPS (2–60)
-🤖 Pathfinding Toggle	Switch between manual and BFS autopilot
-⬆️⬇️⬅️➡️ Arrow Keys	Control snake movement manually
-🧠 Applications:
+🎮 Game Controls
+Action	Description
+▶️ Start / Pause	Control the main game loop
+⚡ Speed Slider	Adjust FPS (2–60)
+🤖 Pathfinding Toggle	Switch between BFS Autopilot and Manual Control
+⬆️⬇️⬅️➡️ Arrow Keys	Control snake manually when AI is off
+🧩 Technical Details
 
-Demonstrates AI Search Algorithms (BFS) in a fun, visual context.
+Algorithm: Breadth-First Search (BFS)
 
-Useful for learning AI game agent logic, pathfinding, and Flask web deployment.
+Grid Cell Size: 20px
 
-Can be extended to use A*, DFS, or Dijkstra’s algorithm for comparative study.
+Canvas Resolution: 640 × 480
 
-🚀 Future Enhancements:
+Pathfinding Logic:
 
-Add A* and Greedy Best-First Search modes.
+The snake uses BFS to find the shortest path to the nearest food.
 
-Implement score tracking and leaderboard system.
+The snake’s tail is treated as a temporary safe space, since it moves unless the food is eaten.
 
-Include maze generation for complex environments.
+BFS ensures the snake takes the shortest collision-free route.
 
-Deploy on GitHub Pages + Flask API for public access.
+💡 Features
 
-🏁 Conclusion:
+✅ Interactive Web Interface (HTML + JS + Flask)
+✅ BFS Algorithm Visualization
+✅ Autopilot (AI Mode) + Manual Mode
+✅ Adjustable Game Speed
+✅ Simple and Clean UI
+✅ Educational AI demonstration
 
-This mini project successfully combines Artificial Intelligence, Web Technologies, and Game Design to create a dynamic, browser-based application that visually demonstrates how pathfinding algorithms like BFS can make intelligent decisions in real-time gaming environments.
+📘 Learning Outcomes
+
+Implemented AI pathfinding in a real-time environment
+
+Learned Flask web serving with client-side game logic
+
+Understood how BFS explores and finds shortest paths
+
+Practiced integrating Python backend with JavaScript frontend
+
+👨‍💻 Developer Credit
+
+Project By:
+🧑‍💻 Devaprakash J
+📘 Register No: 2117240030025
+🏫 Department: CSE (AI & ML) - A
+📅 Semester: III (3rd Semester)
+🏛️ RIT College
+
+🏁 Conclusion
+
+This Snake AI (Web) project demonstrates how classical search algorithms like BFS can be applied in game environments to create intelligent autonomous agents. It’s a fun and interactive way to understand the fundamentals of AI pathfinding and game-based problem-solving.
