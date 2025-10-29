@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Snake AI (Web)</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Snake AI (Web)</h1>
+    <canvas id="game" width="640" height="480"></canvas>
+    <div class="controls">
+      <button id="startBtn">Start</button>
+      <button id="pauseBtn">Pause</button>
+      <label>
+        Speed
+        <input id="speed" type="number" value="12" min="2" max="60" step="1" /> FPS
+      </label>
+      <label>
+        <input id="auto" type="checkbox" checked /> Pathfinding
+      </label>
+    </div>
+    <div class="stats">
+      <span>Score: <strong id="score">0</strong></span>
+    </div>
+    <p class="hint">Arrow keys to play manually when Pathfinding is off.</p>
+  </div>
+
+  <script src="script.js"></script>
+  <script>
+    window.addEventListener('DOMContentLoaded', () => {
+      const game = new SnakeGame('game');
+      const startBtn = document.getElementById('startBtn');
+      const pauseBtn = document.getElementById('pauseBtn');
+      const speed = document.getElementById('speed');
+      const auto = document.getElementById('auto');
+
+      startBtn.onclick = () => game.start(parseInt(speed.value, 10));
+      pauseBtn.onclick = () => game.pause();
+      speed.onchange = () => game.setFps(parseInt(speed.value, 10));
+      auto.onchange = () => game.setAuto(auto.checked);
+    });
+  </script>
+  </body>
+  </html>
+
+
